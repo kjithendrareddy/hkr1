@@ -1,4 +1,4 @@
-[9:46 am, 4/05/2024] Unknown: if _name_ == '_main_':
+#1.[9:46 am, 4/05/2024] Unknown: if __name__ == '__main__':
     x = int(input())
     y = int(input())
     z = int(input())
@@ -11,7 +11,8 @@
                     ans.append([i, j, k])
 
     print(ans)
-[9:46 am, 4/05/2024] Unknown: if _name_ == '_main_':
+
+#2. [9:46 am, 4/05/2024] Unknown: if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split())
 
@@ -25,7 +26,9 @@
             continue
     ordr = sorted(scores, reverse=True)
     print(ordr[1])
-[9:46 am, 4/05/2024] Unknown: if _name_ == '_main_':
+
+
+$3.[9:46 am, 4/05/2024] Unknown: if __name__ == '__main__':
     alist = []
     for i in range(int(input())):
         name = input()
@@ -33,7 +36,9 @@
         alist.append([name, score])
 second_highest = sorted(set([score for name, score in alist]))[1]
 print('\n'.join(sorted([name for name, score in alist if score == second_highest])))
-[9:46 am, 4/05/2024] Unknown: if _name_ == '_main_':
+
+
+#4.[9:46 am, 4/05/2024] Unknown: if __name__ == '__main__':
     n = int(input())
     student_marks = {}
     sonuc = 0
@@ -47,19 +52,23 @@ print('\n'.join(sorted([name for name, score in alist if score == second_highest
         sonuc += i
     average = sonuc / len(student_marks[query_name])
     print("%.2f" %average)
-[9:46 am, 4/05/2024] Unknown: def split_and_join(line):
+
+
+#5.[9:46 am, 4/05/2024] Unknown: def split_and_join(line):
     
     a = line.split(" ")
     b = "-".join(a)
     return(b)
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
 
     line = input()
     result = split_and_join(line)
     print(result)
-[9:46 am, 4/05/2024] Unknown: def print_rangoli(size):
+
+
+#6.[9:46 am, 4/05/2024] Unknown: def print_rangoli(size):
     a = "abcdefghijklmnopqrstuvwxyz"
     lines = []
     for row in range(size):
@@ -74,10 +83,12 @@ if _name_ == '_main_':
         print(lines[row].center(width, '-'))
     # your code goes here
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     n = int(input())
     print_rangoli(n)
-[9:46 am, 4/05/2024] Unknown: def minion_game(string):
+
+
+#7.[9:46 am, 4/05/2024] Unknown: def minion_game(string):
 
     n = len(string)
     comb = ((n)*(n+1))/2
@@ -93,6 +104,6 @@ if _name_ == '_main_':
     else:
         print("Kevin", int(count_k))
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     s = input()
     minion_game(s)
