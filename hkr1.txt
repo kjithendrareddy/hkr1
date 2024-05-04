@@ -1,0 +1,98 @@
+[9:46 am, 4/05/2024] Unknown: if _name_ == '_main_':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    ans = []
+    for i in range(x + 1):
+        for j in range(y + 1):
+            for k in range(z + 1):
+                if i + j + k != n:
+                    ans.append([i, j, k])
+
+    print(ans)
+[9:46 am, 4/05/2024] Unknown: if _name_ == '_main_':
+    n = int(input())
+    arr = map(int, input().split())
+
+    lst = list(arr)
+    scores = list()
+
+    for score in lst:
+        if score not in scores:
+            scores.append(score)
+        else :
+            continue
+    ordr = sorted(scores, reverse=True)
+    print(ordr[1])
+[9:46 am, 4/05/2024] Unknown: if _name_ == '_main_':
+    alist = []
+    for i in range(int(input())):
+        name = input()
+        score = float(input())
+        alist.append([name, score])
+second_highest = sorted(set([score for name, score in alist]))[1]
+print('\n'.join(sorted([name for name, score in alist if score == second_highest])))
+[9:46 am, 4/05/2024] Unknown: if _name_ == '_main_':
+    n = int(input())
+    student_marks = {}
+    sonuc = 0
+    average = float()
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    for i in student_marks[query_name]:
+        sonuc += i
+    average = sonuc / len(student_marks[query_name])
+    print("%.2f" %average)
+[9:46 am, 4/05/2024] Unknown: def split_and_join(line):
+    
+    a = line.split(" ")
+    b = "-".join(a)
+    return(b)
+
+
+if _name_ == '_main_':
+
+    line = input()
+    result = split_and_join(line)
+    print(result)
+[9:46 am, 4/05/2024] Unknown: def print_rangoli(size):
+    a = "abcdefghijklmnopqrstuvwxyz"
+    lines = []
+    for row in range(size):
+        print_ = "-".join(a[row:size])
+        lines.append(print_[::-1] + print_[1:])
+    width = len(lines[0])
+    
+    for row in range(size-1, 0, -1):
+        print(lines[row].center(width, '-'))
+        
+    for row in range(size):
+        print(lines[row].center(width, '-'))
+    # your code goes here
+
+if _name_ == '_main_':
+    n = int(input())
+    print_rangoli(n)
+[9:46 am, 4/05/2024] Unknown: def minion_game(string):
+
+    n = len(string)
+    comb = ((n)*(n+1))/2
+    count_k = 0
+    count_s = 0
+    count_k = sum([len(string[i:]) for i in range(len(string)) if string[i] in "AEIOU"])
+    count_s = comb - count_k
+    
+    if count_s == count_k:
+        print("Draw")
+    elif count_s > count_k:
+        print("Stuart", int(count_s) )
+    else:
+        print("Kevin", int(count_k))
+
+if _name_ == '_main_':
+    s = input()
+    minion_game(s)
